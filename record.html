@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldennetline Portal</title>
+      <!--CSS-->
+      <link rel="stylesheet" href="record.css">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="big_box">
+        <div class="medium_box">
+            <div class="small_box">
+                <div class="title">
+                    <h3>Science Students</h3>
+                    <div class="open-segment" id="open-seg-sci">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="close-segment" id="close-seg-sci">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="description" id="desc-sci">
+                    <p id="sci-video-1">First Video</p>
+                    <p id="sci-video-2">second  Video</p>
+                    <p id="sci-video-3">Third Video</p>
+                </div>
+            </div>
+        
+            <div class="small_box" >
+                <div class="title">
+                    <h3>Accounting Students</h3>
+                    <div class="open-segment" id="open-seg-acc">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="close-segment" id="close-seg-acc">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="description" id="desc-acc">
+                    <p id="account_video_1">Bodfsd Video</p>
+                    <p id="account_video_2">second  Video</p>
+                    <p id="account_video_3">Third Video</p>
+                </div>
+            </div>
+        
+            <div class="small_box" >
+                <div class="title">
+                    <h3>English Students</h3>
+                    <div class="open-segment" id="open-seg-eng">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="close-segment" id="close-seg-eng">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="description" id="desc-eng">
+                    <p id="account_video_1">English Video 1</p>
+                    <p id="account_video_2">English Video 2</p>
+                    <p id="account_video_3">English Video 3</p>
+                </div>
+            </div>
+        
+            <div class="small_box">
+                <div class="title">
+                    <h3>Chinese Students</h3>
+                    <div class="open-segment" id="open-seg-chi">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="close-segment" id="close-seg-chi">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="description" id="desc-chi">
+                    <p id="chi-video-1">Chinese Video 1</p>
+                    <p id="chi-video-2">Chinese Video 2</p>
+                    <p id="account_video_3">Chinese Video 3</p>
+                </div>
+            </div>
+
+        </div>
+
+    
+        <div class="video_box">
+            <video id="video-sci-1" style="display: none;" width="700" height="480" controls>
+                <source src="videos/science_video_1.mp4" type="video/mp4">
+            </video>
+
+            <video id="video-sci-2" style="display: none;" width="700" height="480" controls>
+                <source src="videos/sample_video2.mp4" type="video/mp4">
+            </video>
+
+            <video id="video-chi-1" style="display: none;" width="700" height="480" controls>
+                <source src="videos/chinese_video_1.mp4" type="video/mp4">
+            </video>
+
+            <video id="video-chi-2" style="display: none;" width="700" height="480" controls>
+                <source src="videos/chinese_video_2.mp4" type="video/mp4">
+            </video>
+    
+        </div>
+
+    </div>
+
+    
+</body>
+
+<script>
+
+    const openSegment_sci=document.querySelector('#open-seg-sci');
+    const closeSegment_sci=document.querySelector('#close-seg-sci');
+    const openSegment_acc=document.querySelector('#open-seg-acc');
+    const closeSegment_acc=document.querySelector('#close-seg-acc');
+    const openSegment_eng=document.querySelector('#open-seg-eng');
+    const closeSegment_eng=document.querySelector('#close-seg-eng');
+    const openSegment_chi=document.querySelector('#open-seg-chi');
+    const closeSegment_chi=document.querySelector('#close-seg-chi');
+
+    const Description_sci=document.querySelector('#desc-sci');
+    const Description_acc=document.querySelector('#desc-acc');
+    const Description_eng=document.querySelector('#desc-eng');
+    const Description_chi=document.querySelector('#desc-chi');
+
+
+
+    openSegment_sci.addEventListener('click',show_sci);
+    closeSegment_sci.addEventListener('click',close_sci);
+    openSegment_acc.addEventListener('click',show_acc);
+    closeSegment_acc.addEventListener('click',close_acc);
+    openSegment_eng.addEventListener('click',show_eng);
+    closeSegment_eng.addEventListener('click',close_eng);
+    openSegment_chi.addEventListener('click',show_chi);
+    closeSegment_chi.addEventListener('click',close_chi);
+
+    function show_sci(){
+        Description_sci.style.display='flex';
+        closeSegment_sci.style.display='block';
+        openSegment_sci.style.display='none';
+    }
+
+    function close_sci(){
+       Description_sci.style.display='none';
+       closeSegment_sci.style.display='none';
+       openSegment_sci.style.display='block';
+    }
+
+    function show_acc(){
+        Description_acc.style.display='flex';
+        closeSegment_acc.style.display='block';
+        openSegment_acc.style.display='none';
+    }
+
+    function close_acc(){
+       Description_acc.style.display='none';
+       closeSegment_acc.style.display='none';
+       openSegment_acc.style.display='block';
+    }
+
+    function show_eng(){
+        Description_eng.style.display='flex';
+        closeSegment_eng.style.display='block';
+        openSegment_eng.style.display='none';
+    }
+
+    function close_eng(){
+       Description_eng.style.display='none';
+       closeSegment_eng.style.display='none';
+       openSegment_eng.style.display='block';
+    }
+
+    function show_chi(){
+        Description_chi.style.display='flex';
+        closeSegment_chi.style.display='block';
+        openSegment_chi.style.display='none';
+    }
+
+    function close_chi(){
+       Description_chi.style.display='none';
+       closeSegment_chi.style.display='none';
+       openSegment_chi.style.display='block';
+    }
+    
+    const sci_video_1=document.querySelector("#sci-video-1");
+    const Science1=document.querySelector("#video-sci-1");
+    const sci_video_2=document.querySelector("#sci-video-2");
+    const Science2=document.querySelector("#video-sci-2");
+    const chi_video_1=document.querySelector("#chi-video-1");
+    const Chinese1=document.querySelector("#video-chi-1");
+    const chi_video_2=document.querySelector("#chi-video-2");
+    const Chinese2=document.querySelector("#video-chi-2");
+
+    sci_video_1.addEventListener('click',play_sci1);
+    sci_video_2.addEventListener('click',play_sci2);
+    chi_video_1.addEventListener('click',play_chi1);
+    chi_video_2.addEventListener('click',play_chi2);
+
+    function play_sci1(){
+        Science2.pause();
+        Chinese1.pause();
+        Chinese2.pause();
+        Science1.style.display='block';
+        Science2.style.display='none';
+        Chinese1.style.display='none';
+        Chinese2.style.display='none';
+    }
+
+    
+    function play_sci2(){
+        Science1.pause();
+        Chinese1.pause();
+        Chinese2.pause();
+        Science2.style.display='block';
+        Science1.style.display='none';
+        Chinese1.style.display='none';
+        Chinese2.style.display='none';
+    }
+
+    function play_chi1(){
+        Science1.pause();
+        Science2.pause();
+        Chinese2.pause();
+        Chinese1.style.display='block';
+        Science1.style.display='none';
+        Science2.style.display='none';
+        Chinese2.style.display='none';
+    }
+    function play_chi2(){
+        Science1.pause();
+        Science2.pause();
+        Chinese1.pause();
+        Chinese2.style.display='block';
+        Science1.style.display='none';
+        Science2.style.display='none';
+        Chinese1.style.display='none';
+    }
+
+</script>
+</html>
